@@ -649,7 +649,10 @@ import Packages from '../components/Packages.astro';
       mobileMenuToggle.setAttribute('aria-expanded', isExpanded.toString());
 
       // Prevent body scrolling when menu is open
-      document.body.style.overflow = isExpanded ? 'hidden' : '';
+      //document.body.style.overflow = isExpanded ? 'hidden' : '';
+      document.documentElement.style.overflow = isExpanded ? 'hidden' : '';
+document.body.style.overflow = isExpanded ? 'hidden' : '';
+
     });
 
     // Toggle mobile dropdown

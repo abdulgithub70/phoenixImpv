@@ -163,14 +163,17 @@ const galleryItems = [
             />
           </div>
         ))}
+        
       </div>
+     <button class="gallery-arrow left arrow-left" aria-label="Previous slide">❮</button>
+      <button class="gallery-arrow right arrow-right" aria-label="Next slide">❯</button>
     </div>
-
-    <!-- Manual Arrow Navigation -->
+ <!-- Manual Arrow Navigation 
     <div class="gallery-navigation">
-      <button class="gallery-arrow left arrow-left" aria-label="Slide left">◀</button>
-      <button class="gallery-arrow right arrow-right" aria-label="Slide right">▶</button>
+      <button class="allery-arrow left arrow-left" aria-label="Slide left">❮</button>
+      <button class="allery-arrow right arrow-right" aria-label="Slide right">❯</button>
     </div>
+    -->
   </div>
 </section>
 
@@ -184,6 +187,47 @@ const galleryItems = [
 </div>
 
 <style>
+.gallery-arrow  {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(212, 175, 55, 0.9);
+        color: white;
+        border: none;
+        width: clamp(30px, 5vw, 40px);
+        height: clamp(30px, 5vw, 40px);
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 2;
+    }
+.gallery-arrow {
+        background: rgb(212, 175, 55);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .arrow-left {
+        left: clamp(0.5rem, 2vw, 1rem);
+    }
+
+    .arrow-right {
+        right: clamp(0.5rem, 2vw, 1rem);
+    }
+
+
+/* Position left and right arrows */
+.arrow-left {
+  left: -20px; /* Adjust this as needed */
+}
+
+.arrow-right {
+  right: -20px; /* Adjust this as needed */
+}
+
   .gallery-section {
     padding: 2rem 0;
     background-color: var(--color-bg);
