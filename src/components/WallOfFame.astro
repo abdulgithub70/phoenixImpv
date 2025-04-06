@@ -193,7 +193,7 @@ const totalSlides = Math.ceil(celebrities.length / 4);
   /* Mobile adjustments */
   @media (max-width: 480px) {
     .section-title {
-      font-size: 2.2rem;
+      font-size: 2.0rem;
     }
     /* Increase container padding on mobile for safe area */
     .wof-celebrities-container {
@@ -228,6 +228,12 @@ const totalSlides = Math.ceil(celebrities.length / 4);
     }
     .wof-next-arrow {
       right: -27px;
+    }
+  }
+  @media(max-width:360px)
+  {
+    .section-title {
+      font-size: 1.8rem;
     }
   }
 </style>
